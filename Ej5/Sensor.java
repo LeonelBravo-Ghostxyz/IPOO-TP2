@@ -19,8 +19,8 @@ public class Sensor {
         p2 = p;
     }
     public void copy(Sensor s){
-        this.p1 = s.p1;
-        this.p2 = s.p2;
+        this.p1 = s.obtenerP1();
+        this.p2 = s.obtenerP2();
     }
 
     /* Consultas */
@@ -39,7 +39,7 @@ public class Sensor {
         else return false;
     }
     public boolean equals(Sensor s){
-        if(s != null && this.p1 == s.p1 & this.p2 == s.p2)return true;
+        if(s != null && this.p1 == s.obtenerP1() & this.p2 == s.obtenerP2())return true;
         else return false;
     }
     public Sensor clone(){

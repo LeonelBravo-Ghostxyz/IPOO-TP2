@@ -108,14 +108,14 @@ public class Refugio {
         else return alimentos;
     }
     public boolean mayorAlimentos(Refugio r){
-        if(r != null && this.alimentos > r.alimentos){
+        if(r != null && this.alimentos > r.obtenerAlimentos()){
             return true;
         }else{
             return false;
         }
     }
     public boolean equals(Refugio r){
-        if(r != null && this.alimentos == r.alimentos && this.bebidas == r.bebidas && this.camas == r.camas){
+        if(r != null && this.alimentos == r.obtenerAlimentos() && this.bebidas == r.obtenerBebidas() && this.camas == r.obtenerCamas()){
             return true;
         }else{
             return false;

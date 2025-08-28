@@ -64,9 +64,9 @@ public class Color {
     }
     public void copy(Color c){
         if(c != null){
-            rojo = c.rojo;
-            azul = c.azul;
-            verde = c.verde;
+            rojo = c.obtenerRojo();
+            azul = c.obtenerAzul();
+            verde = c.obtenerVerde();
         }
     }
 
@@ -102,7 +102,7 @@ public class Color {
     }
     public boolean equals(Color c){
         if(c != null){
-            if(this.rojo == c.rojo && this.azul == c.azul && this.verde == c.verde)return true;
+            if(this.rojo == c.obtenerRojo() && this.azul == c.obtenerAzul() && this.verde == c.obtenerVerde())return true;
             else return false;
         }else return false;
     }

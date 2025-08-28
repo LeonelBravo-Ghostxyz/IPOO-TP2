@@ -7,7 +7,7 @@ public class Jugador {
 
     /* Constructor */
     public Jugador(String nom){
-
+        nombre = nom;
     }
 
     /* Comandos */

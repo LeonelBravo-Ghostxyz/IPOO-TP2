@@ -36,13 +36,13 @@ public class Fecha {
     }
     public boolean esAnterior(Fecha f){
         if(f == null)return false;
-        if(this.anio < f.anio && this.mes < f.mes && this.dia < f.dia){
+        if(this.anio < f.obtenerAnio() && this.mes < f.obtenerMes() && this.dia < f.obtenerDia()){
             return true;          
         }else return false;
     }
     public boolean mismoAnio(Fecha f){
         if(f == null)return false;
-        if(this.anio == f.anio)return true;
+        if(this.anio == f.obtenerAnio())return true;
         else return false;
     }
     public boolean equals(Fecha f){
