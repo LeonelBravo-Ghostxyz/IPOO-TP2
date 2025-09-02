@@ -57,16 +57,16 @@ public class Refugio {
     }
 
     public boolean reponerAlimentos(int n){
-        if(n > 0 && capacidadAlacena >= (alimentos+n)){
+        if(n > 0 && capacidadAlacena >= (bebidas+alimentos+n)){
             alimentos = alimentos + n;
             return true;
         }else{
             return false;
-        } //!El tester retorna error cuando supera la capcidad (?)
+        }
     }
 
     public boolean reponerBebidas(int n){
-        if(n > 0 && (bebidas+n) <= capacidadAlacena){
+        if(n > 0 && (alimentos+bebidas+n) <= capacidadAlacena){
             bebidas = bebidas + n;
             return true;
         }else{
