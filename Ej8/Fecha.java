@@ -34,12 +34,26 @@ public class Fecha {
         if(anio % 4 == 0)return true;
         else return false;
     }
-    public boolean esAnterior(Fecha f){
-        if(f == null)return false;
-        if(this.anio < f.obtenerAnio() && this.mes < f.obtenerMes() && this.dia < f.obtenerDia()){
-            return true;          
-        }else return false;
+    public boolean esAnterior(Fecha f) {
+    // Inicializamos una variable booleana para almacenar el resultado.
+    boolean resultado = false;
+    // Comparamos los años
+    if (this.anio < f.obtenerAnio()) {
+        resultado = true;
+    } 
+    // Si los años son iguales, comparamos los meses
+    else if (this.anio == f.obtenerAnio() && this.mes < f.obtenerMes()) {
+        resultado = true;
     }
+    // Si los años y meses son iguales, comparamos los días
+    else if (this.anio == f.obtenerAnio() && this.mes == f.obtenerMes() && this.dia < f.obtenerDia()) {
+        resultado = true;
+    }
+
+    // Retornamos el resultado final.
+    return resultado;
+}
+
     public boolean mismoAnio(Fecha f){
         if(f == null)return false;
         if(this.anio == f.obtenerAnio())return true;
